@@ -97,8 +97,8 @@ codess 会在项目目录下生成一个配置文件codess.config.json，用来�
 {
     // 依赖的代码片段包列表
     "dependent": [],
-    // 已安装的远程包的更新时间，用来判断远程包是不是最新的
-    "packageUpdateTime": {},
+    // 包安装记录，主要记录已安装包的信息
+    "installRecord": {},
     // codess 官方文档
     "document": "https://codess.dumogu.top/doc"
 }
@@ -111,16 +111,20 @@ codess 会在项目目录下生成一个配置文件codess.config.json，用来�
             // 包名
             "package": "vue",
             // 包触发词
-            "prefix": "vue",
-            "description": ""
+            "prefix": "v",
         },
         {
-            "package": "file:snippets",// 一个本地片段包 ./snippets/
-            "prefix": "my"
+          "package": "file:snippets",// 一个本地片段包 ./snippets/
+          "prefix": "my"
         }
     ],
-    "packageUpdateTime": {
-        "vue": "1720860843371"
+    "installRecord": {
+      "vue": {
+          "home": "",
+          "description": "",
+          "version": "3",
+          "updateDate": "1720860843371"
+        }
     },
     "document": "https://codess.dumogu.top/doc"
 }
